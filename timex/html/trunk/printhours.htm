@@ -40,53 +40,100 @@
 		</div>
 		<div id="page">
 			<div id="content">
-				<form method="post" action="timesheetlist.htm">
-					<table align="center" cellpadding="0" cellspacing="0">
-						<tr>
-							<td>
-							<table align="center" cellpadding="4" cellspacing="0"
-							bordercolor="#CCCCCC">
-								<tr valign="middle">
-									<td width="90%" valign="middle"><h1>Sign In</h1>
-									<br />
-									</td>
-								</tr>
-								<tr>
-									<td colspan="2">
-									<center>
+				<table align="center" cellpadding="0" cellspacing="0">
+					<tr>
+						<td>
+						<table border="0" align="center" cellpadding="4" cellspacing="0"
+						bordercolor="#CCCCCC">
+							<tr valign="middle">
+								<td width="90%" height="60" valign="middle"><h1>Timesheet Report</h1>
+								<br />
+								</td>
+								<div align="left">
+									<a href="javascript:history.go(-1)">Previous page</a>
+								</div>
+								<td align="right" nowrap="nowrap"><a href="signout.htm">Sign
+								out</a></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+								<div align="center">
+									<span class="style31">Employee: Mike Dover
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Period
+										Ending: March 28, 2010 </span>
+									<br>
+								</div>
+								<table border="0" align="center" cellpadding="8" cellspacing="25">
+									<tr>
+										<th scope="row"><span class="style25">Department</span></th>
+										<th><span class="style25">Mo</span></th>
+										<th><span class="style25">Tu</span></th>
+										<th><span class="style25">We</span></th>
+										<th><span class="style25">Th</span></th>
+										<th><span class="style25">Fr</span></th>
+										<th><span class="style25">Sa</span></th>
+										<th><span class="style25">Su</span></th>
+										<th><span class="style25">Total</span></th>
+									</tr>
+									<tr>
+										<td scope="row">
+										<div align="center" class="style25">
+											Information Technology
+										</div></td>
+										<td>
+										<div align="center" class="style25">
 
-										<!-- status messages -->
-									</center>
-									<div align="center">
-										<p>
-											Please provide your authentication information below.
-										</p>
-										<p>
-											Employee Id:
+											8.0
 
-											<input name='employeeId'
-											value='0' type="text"
-											size="6" maxlength="6">
+										</div><td>
+										<div align="center" class="style25">
 
-											&nbsp;Password:
+											8.0
 
-											<input name='password'
-											value='' type="password"
-											size="8" maxlength="10">
+										</div><td>
+										<div align="center" class="style25">
+
+											8.0
+
+										</div><td>
+										<div align="center" class="style25">
+
+											8.0
+
+										</div></td><td>
+										<div align="center" class="style25">
+
+											8.0
+
+										</div></td><td>
+										<div align="center" class="style24">
 
 											&nbsp;
-											<input type="submit" name="Submit" value="Sign In">
-										</p>
-									</div>
-				</form>
-				</td>
-				</tr>
-				<tr>
-					<td colspan="2">&nbsp;</td>
-				</tr>
-				</table>
-				</td>
-				</tr>
+
+										</div></td><td>
+										<div align="center" class="style24">
+
+											&nbsp;
+
+										</div></td><td>
+										<div align="center" class="style25">
+
+											40.0
+
+										</div></td>
+									</tr>
+								</table>
+								<p align="center">
+									&nbsp;&nbsp;
+									<input name="submit" type="button" id="submit"
+									value="Print Timesheet" onClick="window.print()">
+								</p></td>
+							</tr>
+							<tr>
+								<td colspan="2">&nbsp;</td>
+							</tr>
+						</table></td>
+					</tr>
 				</table>
 			</div>
 			<!-- end #content -->

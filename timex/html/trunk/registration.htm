@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Online Timesheet System</title>
+		<meta name="keywords" content="Timeheets, Time, Clock" />
+		<meta name="description"
+		content="This is TIMEX, the Online Timesheet System for ACME Company Inc." />
+		<link href="styles/default.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript">
+			function enabledButtons(name) {
+				if (document.forms[0].elements[name].selectedIndex == 0) {
+					document.getElementById('register').disabled = true;
+				} else {
+					document.getElementById('register').disabled = false;
+				}
+			}
+
+			function validate() {
+				if (document.forms[0].elements['username'].value = "") {
+					alert('Must input a User Name');
+					return false;
+				} else if (document.forms[0].elements['password'].value != document.forms[0].elements['reenterpassword'].value) {
+					alert('Password and Re-enter Password must be the same');
+					return false;
+				} else if (document.forms[0].elements['state'].selectedIndex == 0) {
+					alert('Please select State');
+					return false;
+				} else {
+					return true;
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="header">
+			<div id="logo">
+				<h1><a href="#"><b>T I M E X</b> </a></h1>
+				<h2><a href="">Online Timesheet System</a></h2>
+			</div>
+			<div id="menu">
+				<ul>
+					<li class="active">
+						<a href="registration.htm" accesskey="R" title="Register"><b>R</b>egister</a>
+					</li>
+					<li>
+						<a href="#" accesskey="C" title="Contact Us"><b>C</b>ontact
+						Us</a>
+					</li>
+					<li>
+						<a href="#" accesskey="H" title="Help"><b>H</b>elp</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- end #header -->
+		<div id="page">
+			<div id="content">
+				<form method='post' onSubmit='javascript:return validate();' action='signin.htm'>
+					<table width="85%" border="1" align="center" cellpadding="0"
+					cellspacing="0">
+						<tr>
+							<td>
+							<table width="100%" border="0" align="center" cellpadding="60"
+							cellspacing="5">
+								<tr valign="middle">
+									<td width="90%" height="60"><h1>Registration</h1>
+									<br />
+									</td>
+									<td align="right" nowrap="nowrap"></td>
+								</tr>
+								<tr>
+									<td colspan="2" align="center">
+									<center>
+
+										<!-- status messages -->
+									</center>
+									<p>
+										Please provide the following information:
+									</p></td>
+								</tr>
+								<tr>
+									<td colspan="2" align="center">
+									<table align="center" cellpadding="20" cellspacing="10">
+										<tr>
+											<td> Employee Id :</td><td>
+											<input name='username'
+											type="text"
+											size="10" maxlength="10" />
+											</td>
+										</tr>
+										<tr>
+											<td> Employee Full Name :</td><td>
+											<input name='fullname'
+											type="text"
+											size="30" maxlength="30" />
+											</td>
+										</tr>
+										<tr>
+											<td> Password :</td><td>
+											<input name='password'
+											type="password"
+											size="15" maxlength="15" />
+											</td>
+										</tr>
+										<tr>
+											<td> Re-enter Password :</td><td>
+											<input name='reenterpassword'
+											type="password"
+											size="15" maxlength="15" />
+											</td>
+										</tr>
+										<tr>
+											<td> Email :</td><td>
+											<input name='email'
+											type="text"
+											size="25" maxlength="25" />
+											</td>
+										</tr>
+										<tr>
+											<td> Manager :</td><td>
+											<select name='manager' onChange='javascript:enabledButtons(this.name)'/>
+											<option value='' selected ></option>
+											<option	value='3'> Teresa Walker </option>
+											<option	value='4'> Tom Brady </option>
+											<option	value='5'> Alvaro Escobar </option>
+											</select> </td>
+										</tr>
+									</table>
+									<table align="center" cellpadding="20" cellspacing="10">
+										<tr>
+											<td colspan=4>
+											<hr>
+											</td>
+										</tr>
+										<tr>
+											<td> Address :</td><td colspan=3>
+											<input name='address'
+											type="text"
+											size="40" maxlength="40" />
+											</td>
+										</tr>
+
+										<tr>
+											<td> City :</td><td colspan=3>
+											<input name='city'
+											type="text"
+											size="20" maxlength="20" />
+											</td>
+										</tr>
+
+										<tr>
+											<td> State :</td><td>
+											<select name='state'/>
+											<option value='' selected ></option>
+											<option value='FL'>Florida</option>
+											<option value='GA'>Georgia</option>
+											<option	value='NY'>New York</option>
+											<option	value='CA'>California</option>
+											</select></td>
+											<td> Zipcode :</td><td>
+											<input name='zipcode'
+											type="text"
+											size="5" maxlength="5" />
+											</td>
+										</tr>
+									</table>
+									<br>
+									</br>
+									<p align="center">
+										<input name="register" id="register" type="submit" value="Register" disabled >
+										<br>
+										<br>
+									</p></td>
+								</tr>
+							</table></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<!-- end #content -->
+			<div id="sidebar">
+				<div id="news" class="boxed1">
+					<h2 class="title">Benefits of Registration</h2>
+					<div class="content">
+						<ul>
+							<li>
+								<h3>Weekly Time Tracking</h3>
+								<p>
+									Keep track of your weekly time worked.
+								</p>
+							</li>
+							<li>
+								<h3>Time Submission Reminders</h3>
+								<p>
+									Be reminded of your weekly timesheet submission.
+								</p>
+							</li>
+							<li>
+								<h3>Employee Time Reports</h3>
+								<p>
+									Keep track of timesheets submitted by your employees.
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- end #sidebar -->
+			<div style="clear: both; height: 1px;"></div>
+		</div>
+		<!-- end #page -->
+		<div id="footer">
+			<p>
+				Copyright &copy; 2012 TIMEX - Online Timesheet System for <a
+				href="http://localhost:8080">ACME Company Inc.</a>
+			</p>
+		</div>
+
+	</body>
+</html>
